@@ -9,7 +9,6 @@ import { BeautyComponent } from './beauty/beauty.component';
 import { CharmComponent } from './charm/charm.component';
 import { StrangeComponent } from './strange/strange.component';
 import { TopComponent } from './top/top.component';
-import { SpinComponent } from './spin/spin.component';
 import { UpComponent } from './up/up.component';
 import { DownComponent } from './down/down.component';
 
@@ -22,7 +21,6 @@ import { DownComponent } from './down/down.component';
     CharmComponent,
     StrangeComponent,
     TopComponent,
-    SpinComponent,
     UpComponent,
     DownComponent
   ],
