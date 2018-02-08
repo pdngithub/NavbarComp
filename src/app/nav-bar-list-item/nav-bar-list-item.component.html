@@ -1,0 +1,9 @@
+<a [routerLink]="[link]" [routerLinkActive]="['active']"
+[routerLinkActiveOptions]="{exact:true}">{{title}}
+  <span class="visible-if-nav-item-active">
+    <span class="glyphicon glyphicon-asterisk"></span>
+  </span>
+  <span class="visible-if-nav-item-active">
+    <span class="sr-only"> (current)</span>
+  </span>
+</a>

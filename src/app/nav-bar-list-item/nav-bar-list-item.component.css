@@ -1,0 +1,8 @@
+.visible-if-nav-item-active {
+    display: none;
+  }
+  
+.active > .visible-if-nav-item-active {
+    display: initial;
+  }
+  

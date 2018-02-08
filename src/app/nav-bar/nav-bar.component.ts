@@ -11,32 +11,32 @@ export class NavBarComponent implements OnInit {
   public navBarItems: NavBarItem[] = 
   [
     {
-      title: "Sample 1",
-      path: "sample01"
+      title: "Home",
+      path: ""
     },
     {
-      title: "Sample 2 (columns)",
-      path: "sample02"
+      title: "Beauty",
+      path: "beauty"
     },
     {
-      title: "paging",
-      path: "paging"
+      title: "Charm",
+      path: "charm"
     },
     {
-      title: "forms",
-      path: "forms"
+      title: "Down",
+      path: "down"
     },
     {
-      title: "media",
-      path: "media"
+      title: "Strange",
+      path: "strange"
     },
     {
-      title: "carousel",
-      path: "carousel"
+      title: "Top",
+      path: "top"
     },
     {
-      title: "modal",
-      path: "modal"
+      title: "Up",
+      path: "up"
     }
   ]
 

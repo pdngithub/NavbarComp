@@ -15,7 +15,7 @@ const routes: Routes = [
   { path: 'down', component: DownComponent },
   { path: 'strange', component: StrangeComponent },
   { path: 'top', component: TopComponent },
-  { path: 'Up', component: UpComponent }
+  { path: 'up', component: UpComponent }
 ];
 
 @NgModule({

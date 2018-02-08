@@ -1,0 +1,10 @@
+<li 
+  *ngFor="let item2 of navBarItemsUl"
+  link="{{item2.path}}" 
+  title="{{item2.title}}"
+  app-nav-bar-list-item
+  [routerLinkActive]="['active']"
+  [routerLink]="item2.path" 
+  [routerLinkActiveOptions]="{exact:true}">
+  <!-- any contents here are completely replaced by app-nav-bar-list-item -->
+</li>

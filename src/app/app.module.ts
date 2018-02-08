@@ -11,6 +11,9 @@ import { StrangeComponent } from './strange/strange.component';
 import { TopComponent } from './top/top.component';
 import { UpComponent } from './up/up.component';
 import { DownComponent } from './down/down.component';
+import { NavBarItemsUlComponent } from './nav-bar-items-ul/nav-bar-items-ul.component';
+import { NavBarUnorderedListComponent } from './nav-bar-unordered-list/nav-bar-unordered-list.component';
+import { NavBarListItemComponent } from './nav-bar-list-item/nav-bar-list-item.component';
 
 
 @NgModule({
@@ -22,7 +25,10 @@ import { DownComponent } from './down/down.component';
     StrangeComponent,
     TopComponent,
     UpComponent,
-    DownComponent
+    DownComponent,
+    NavBarItemsUlComponent,
+    NavBarUnorderedListComponent,
+    NavBarListItemComponent
   ],
   imports: [
     BrowserModule,
