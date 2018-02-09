@@ -8,6 +8,12 @@ Navigation bars are written in bootstrap with a `<nav>` tag surrounding `<div>` 
 
 ¹Those of you who are more comfortable with css will realize that that I could have easily overridden the .sr-only class in the component, making it visible by undoing bootstrap's css. But I assumed that that it needed to be invisible to work.
 
+## Running Code
+
+A running copy of this project is available at: https://codesandbox.io/s/github/pdngithub/NavbarComp/tree/master/. 
+
+Note that the menu is reactive, so if the window isn't wide enough it will replace the regular navbar with a "burger menu." Widen the window to see the regular navbar.
+
 ## First Implementations
 
 ### `*ngFor` loop works, but...
@@ -31,7 +37,7 @@ For the outer `<nav>` component this is fine, but when the tag selector is used 
 
 ### Attribute selectors
 
-It turns out that the angular selector is a css selector. The tag selector implemented by default by angular cli is just one type of selector. There is also an attribute selector, which can be applied to a well-known tag such as a `<ul>` tag or a `<li>` tag. Below is a `<li>` element with an attribute component applied. The contents of this 
+It turns out that the angular selector uses the same syntax as a css selector. The tag selector implemented by default by angular cli is just one type of selector. There is also an attribute selector, and a custom attribute can be applied to a well-known tag such as a `<ul>` tag or a `<li>` tag to convert it into an angular component. Below is a `<li>` element with an attribute component applied. The contents of this 
 
     <li 
       ...
@@ -51,7 +57,7 @@ To convert a component from a tag selector to an attribute selector, just add sq
     export class NavBarListItemComponent implements OnInit {
         ...
 
-Because all the normal tags are in the right place, bootstrap works as expected. Because I split everything to angular components, the navbar is split into separate components that can be edited or replaced individually.
+Because all the normal tags are in the right place, bootstrap works as expected. With everything split into angular components, the navbar components can be edited or replaced individually.
 
 ### Getting attributes right
 
