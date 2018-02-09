@@ -12,7 +12,7 @@ Navigation bars are written in bootstrap with a `<nav>` tag surrounding `<div>` 
 
 ### `*ngFor` loop works, but...
 
-My first attempt to implement the `<li>` in the `<nav>` using *ngFor loops. As you might expect this worked fine. I didn't have to repeat individual elements, and I could change everything in one place. But the refactoring tick had dug into my skin. I wanted to refactor layers of the `<nav>` into separate angular components so I could assemble them.
+My first attempt to implement the `<li>` in the `<nav>` using `*ngFor` loops. As you might expect this worked fine. I didn't have to repeat individual elements, and I could change everything in one place. But the refactoring tick had dug into my skin. I wanted to refactor layers of the `<nav>` into separate angular components so I could assemble them.
 
 ### Naive tag component flummoxes bootstrap
 
@@ -55,7 +55,7 @@ Because all the normal tags are in the right place, bootstrap works as expected.
 
 ### Getting attributes right
 
-On the unordered list there is still an *ngFor loop, but this time in the nav-bar-unordered-list.component.html. The values from this loop have to be passed down from parent component to child components because the html is no longer in the same file. This is done by giving the child elements `@Input()` properties and assigning attributes on the html tags. In this example I tried to avoid using the same property names on the components (at one point using `navBarItemsUl` because `navBarItems` had already been used) to make it clear (mostly to myself) which name was on the parent component and which was on the current component.
+On the unordered list there is still an `*ngFor` loop, but this time in the nav-bar-unordered-list.component.html. The values from this loop have to be passed down from parent component to child components because the html is no longer in the same file. This is done by giving the child elements `@Input()` properties and assigning attributes on the html tags. In this example I tried to avoid using the same property names on the components (at one point using `navBarItemsUl` because `navBarItems` had already been used) to make it clear (mostly to myself) which name was on the parent component and which was on the current component.
 
 ## Aftermath
 
