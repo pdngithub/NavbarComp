@@ -14,6 +14,7 @@ import { DownComponent } from './down/down.component';
 import { NavBarItemsUlComponent } from './nav-bar-items-ul/nav-bar-items-ul.component';
 import { NavBarUnorderedListComponent } from './nav-bar-unordered-list/nav-bar-unordered-list.component';
 import { NavBarListItemComponent } from './nav-bar-list-item/nav-bar-list-item.component';
+import { HomeComponent } from './home/home.component';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { NavBarListItemComponent } from './nav-bar-list-item/nav-bar-list-item.c
     DownComponent,
     NavBarItemsUlComponent,
     NavBarUnorderedListComponent,
-    NavBarListItemComponent
+    NavBarListItemComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

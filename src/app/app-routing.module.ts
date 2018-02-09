@@ -7,9 +7,11 @@ import { DownComponent } from './down/down.component';
 import { StrangeComponent } from './strange/strange.component';
 import { TopComponent } from './top/top.component';
 import { UpComponent } from './up/up.component';
+import { HomeComponent } from './home/home.component';
 
 
 const routes: Routes = [
+  { path: '', component: HomeComponent },
   { path: 'beauty', component: BeautyComponent },
   { path: 'charm', component: CharmComponent },
   { path: 'down', component: DownComponent },
