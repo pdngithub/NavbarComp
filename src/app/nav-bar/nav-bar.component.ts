@@ -1,12 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewChecked } from '@angular/core';
 import { NavBarItem } from '../data/nav-bar-item';
+import { Event } from '@angular/router/src/events';
+import * as $ from 'jquery';
 
 @Component({
   selector: 'app-nav-bar',
   templateUrl: './nav-bar.component.html',
   styleUrls: ['./nav-bar.component.css']
 })
-export class NavBarComponent implements OnInit {
+export class NavBarComponent implements OnInit, AfterViewChecked {
 
   public navBarItems: NavBarItem[] = 
   [
@@ -44,6 +46,15 @@ export class NavBarComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+  }
+
+  onResize( event: Event ) {
+    $(".godown-navbar").height($(".navbar-fixed-top").height());
+  };
+  
+
+  ngAfterViewChecked() {
+    this.onResize( null );
   }
 
 }
