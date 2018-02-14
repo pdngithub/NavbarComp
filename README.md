@@ -94,4 +94,4 @@ When I laid out this example I put six items in the navbar menu. It was an arbit
 * resize on `AfterViewChecked` event so correct at start
 * resize on `window:resize` event so correct as user changes window size
 
-I don't know if `AfterViewChecked` is the "right" lifecycle event to perform the resize on, but it seems to work. Likewise I don't know if using the <div> to prevent overflow is better or worse than using some other mechanism.
+I don't know if `AfterViewChecked` is the "right" lifecycle event to perform the resize on, but it seems to work. Likewise I don't know if using the `<div>` to prevent overflow is better or worse than using some other mechanism.
