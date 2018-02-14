@@ -76,3 +76,22 @@ Right now as soon as you choose the top component, all the child components are 
 ### Other selectors for angular components
 
 Can you use selectors other than tag & attribute for angular components? The answer is, I believe, yes. My understanding is that the full css selector syntax is available, including, for example, id selectors such as `#myParticularNavbar`. I suspect that this can be used to allow using the preferred inner component, but that is a project for another day.
+
+## Addenda
+
+### `.navbar-fixed-top prints` over other content
+
+The class `.navbar-fixed-top` uses css `position:absolute`, which takes the tag out of the normal flow for positioning on the page. The other content (in this case the page heading `<H1>Welcome to {{ title }}</H1>`) is overlaid by the navbar. The most common approach to fixing this is to add top margin or padding to the body. I added a `<div>` element instead. The bootstrap navbar has a minimum height of 50px, so whatever solution is chosen, the height, margin or padding is set to 50px in most solutions offered by other developers.
+
+### Need dynamic sizing for fix to .navbar-fixed-top.
+
+When I laid out this example I put six items in the navbar menu. It was an arbitrary choice, and it created a bug. As the width of the screen shrank, the menu would stack itself before collapsing to a "burger menu." When it was stacked its height was more than 50px. There is no way in css to make the height of the `.navbar-fixed-top` adjustment dynamic, and so javascript has to be used.
+
+* `npm install @types/jquery --save`
+* `npm install @types/bootstrap@3 --save`
+* in nav-bar.component.ts, add `import * as $ from 'jquery';`
+* add javascript to resize in nav-bar.component.ts
+* resize on `AfterViewChecked` event so correct at start
+* resize on `window:resize` event so correct as user changes window size
+
+I don't know if `AfterViewChecked` is the "right" lifecycle event to perform the resize on, but it seems to work. Likewise I don't know if using the <div> to prevent overflow is better or worse than using some other mechanism.
